@@ -71,3 +71,5 @@ create schema nome_do_banco_de_dados;
 ~~~sql
 quit;
 ~~~
+
+[Voltar à página inicial!](https://github.com/monicaquintal/disciplina_TI_II_ETEC)
