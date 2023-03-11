@@ -12,6 +12,6 @@
 1. [Agenda 01: Apresentação da Linguagem SQL ANSI.](./agenda01/agenda01.md)
 2. [Agenda 02: Introdução ao SGBD, implementação de Bancos de Dados e Interface de Comando.](./agenda02/agenda02.md)
 3. [Agenda 03: Comandos SQL e Linguagem de Definição de Dados.](./agenda03/agenda03.md)
-4. 
+4. [Agenda 04: Linguagem de Manipulação de Dados - DML (Data Manipulation Language).](./agenda04/agenda04.md)
 5. 
 6. 
