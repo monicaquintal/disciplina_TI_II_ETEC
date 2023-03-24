@@ -231,17 +231,26 @@ dados por parte de outros terminais.
 5. Explique um motivo da fibra ótica transmitir dados de modo mais eficiente que
 condutores metálicos.
 
-A fibra óptica consegue transmitir dados a uma velocidade maior, primeiramente por utilizar a luz para transmissão, ao passo que condutores metálicos utilizam eletricidade. Pelo fato de utilizarem luz, os dados são imunes a interferências
-eletromagnéticas como nos cabos metálicos.
+> A fibra óptica consegue transmitir dados a uma velocidade maior, primeiramente por utilizar a luz para transmissão, ao passo que condutores metálicos utilizam eletricidade. Pelo fato de utilizarem luz, os dados são imunes a interferências eletromagnéticas como nos cabos metálicos.
 
 6. Como utilizar os Roteadores ou os Access Points nas seguintes situações:
+
   a. Moro num prédio e preciso evitar a interferência de sinais dos meus vizinhos;
 
-  > Para evitar a interferência de sinais dos vizinhos, devemos realizar a análise dos canais de wifi que estão sendo utilizados por eles. Para isso devemos utilizar um programa que realiza uma varredura nos canais sem fio e apresenta-os em forma de gráfico. Um APP para celulares e tablets Android fácil de se obter é o Wi-Fi analyzer apresentando um gráfico 
+> Para evitar a interferência de sinais dos vizinhos, devemos realizar a análise dos canais de wifi que estão sendo utilizados por eles. Para isso devemos utilizar um programa que realiza uma varredura nos canais sem fio e apresenta-os em forma de gráfico. Um APP para celulares e tablets Android fácil de se obter é o Wi-Fi analyzer apresentando um gráfico 
 
   b. Tenho um roteador na Sala de TV da minha casa, mas o sinal se torna fraco no quarto.
+
+> Para melhorar o alcance do sinal de rede sem fio no quarto deve ser utilizado um equipamento chamado de repetidor sem fio. Ele realiza a recepção e amplificação (repetição) do sinal de Wi-Fi melhorando o alcance da rede. Alguns access points podem também realizar a função de repetidor.
+
   c. Possuo uma rede cabeada e quero disponibilizar internet sem fio (Wi-fi).
-7. Preciso montar uma rede no laboratório de informática de uma Etec. Qual a
-topologia de rede mais indicada para esse caso? Por quê?
-8. De que forma o mundo é conectado? Como os dados conseguem trafegar entre
-os continentes?
+
+> Para aqueles que já possuem uma rede cabeada e querem somente disponibilizar um sinal Wi-FI para os seus usuários, basta instalar um access point para transformar o sinal de rede cabeado em sem fio.
+
+7. Preciso montar uma rede no laboratório de informática de uma Etec. Qual a topologia de rede mais indicada para esse caso? Por quê?
+
+> Para se montar uma rede de computadores em um laboratório de informática de uma Etec, a topologia de rede mais indicada é a topologia estrela, pois ela é simples de ligar, possui uma boa tolerância a falhas, exceto quando o nó central falha. Embora precise de uma maior quantidade de cabos para realizar as conexões, uma vez que todos partem do switch até as estações de trabalho.
+
+8. De que forma o mundo é conectado? Como os dados conseguem trafegar entre os continentes?
+
+> O mundo é conectado desde as PANs e LANs passando pelas MANs, que se unem até formar as WANs se unindo na maior WAN que temos que é a Internet tendo um alcance global.
