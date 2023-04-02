@@ -138,3 +138,39 @@ Porta (n°.) | Serviço
 
 ## Camada de Aplicação
 
+- é a ***camada mais visível para os usuários***. 
+- trabalhamos com ela diariamente quando utilizamos programas como clientes de e-mail, mensagens instantâneas, navegadores, entre outros.
+- trabalha com diversos protocolos como:
+  - DHCP – Dynamic Host Configuration Protocol - responsável pela distribuição de endereços de IP automaticamente.
+  - HTTP – HyperText Transfer Protocol – para páginas da internet (web).
+  - DNS – Domain Name System – responsável por traduzir nomes para endereços de IP e vice-versa.
+  - FTP – File Transfer Protocol – responsável por permitir a transferência de arquivos. 
+
+<div align="center">
+<img src="./assets/resumo-camadas.png" width="50%"><br>
+<em>Resumo das Camadas do modelo OSI/ISO.</em>
+</div>
+
+<div align="center">
+
+## Modelo TCP/IP
+
+</div>
+
+- surgiu devido a uma necessidade do departamento de defesa americano (DoD), que com a ameaça da guerra fria teve receio de ter suas instalações destruídas, suas comunicações interrompidas e seus dados perdidos.
+- é um modelo, também arquitetado e estrutural, que propôs resolver o problema da falta de dinâmica da comunicação entre essas instalações.
+- pode ser considerado o avô da internet como conhecemos hoje.
+- foi desenvolvido no final da década de 1960 e ínício de 70, pelo DoD, para realizar a comunicação entre as unidades militares.
+- surgiu de um projeto experimental chamado ***ARPANET*** (Advanced Research Project Agency Network) que valia-se de links de comunicação de alta velocidade utilizando comutação por pacotes.
+- em 1972, o uso da ARPANET começou a crescer internacionalmente e se tornou a Internet como conhecemos hoje.
+
+> `IP (Internet Protocol)` é o protocolo de Internet que é responsável pelo endereçamento de dispositivos nas redes para que os dados consigam chegar ao seu destino, conforme o endereço de IP do destinatário.
+
+- o modelo TCP/IP possui 4 camadas (Enlace, Internet, Transporte e Aplicação).
+
+<div align="center">
+<img src="./assets/comparacao-iso-ip.png" width="50%"><br>
+<em>Comparativo do Modelo OSI/ISO com o TCP/IP.</em>
+</div>
+
+PÁGINA 10
