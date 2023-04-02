@@ -32,3 +32,4 @@
 ## Conteúdo 💻
 
 1. [Agenda 06: Fundamentos da Rede de Computadores.](./agenda06/agenda06.md)
+2. [Agenda 07: Modelos de Referência.](./agenda07/agenda07.md)
