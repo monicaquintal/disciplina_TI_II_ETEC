@@ -169,8 +169,136 @@ Porta (n°.) | Serviço
 - o modelo TCP/IP possui 4 camadas (Enlace, Internet, Transporte e Aplicação).
 
 <div align="center">
-<img src="./assets/comparacao-iso-ip.png" width="50%"><br>
+<img src="./assets/comparacao-iso-ip.png" width="30%"><br>
 <em>Comparativo do Modelo OSI/ISO com o TCP/IP.</em>
 </div>
 
-PÁGINA 10
+## Camada de Enlace
+
+- equivale às camadas 1 e 2 (física e enlace) do modelo OSI.
+- é composta pelo hardware, meios de transmissão, níveis de sinais e conexões elétricas; ou seja, ***equipamentos que realizam as conexões físicas dos equipamentos de comunicação***.
+- MAC address pertence a esta camada.
+- protocolos de enlace como o Ethernet-CSMA/CD, o FDDI e o token-ring são utilizados nessa camada.
+  - CSMA/CD (acrônimo de Carrier Sense Multiple Access with Collision Detection): é um protocolo de comunicação que utiliza a tecnologia Ethernet com detecção de colisão na transmissão de dados. Uma colisão ocorre quando duas estações tentam transmitir dados ao mesmo tempo ocasionando perda de dados transmitidos.
+  - FDDI (Fiber Distributed Data Interface ou interface de dados distribuídos de fibra óptica): é um padrão para a utilização de cabos de fibra óptica em anel padronizado pela ANSI (American National Standards Institute) para utilização em LANs ou MANs.
+
+## Camada de Internet
+
+- correspondende à camada 3 (rede) do modelo OSI que os endereços lógicos são especificados.
+- nesta camada que entra o endereço de rede de origem e destino, como o endereço IP, por exemplo.
+- protocolos de roteamento de dados atuam nessa camada. 
+- exemplo: protocolos OSPF (Open Shortest Path First) e RIP (Routing Information Protocol), responsáveis por determinar a rota ou caminho que os dados seguirão desde a sua origem até o destino final.
+
+### Qual é a diferença entre o protocolo de roteamento OSPF e o RIP?
+- Protocolo OSPF: escolhe a melhor rota dos dados de acordo com a melhor velocidade ou melhor desempenho entre os trechos analisados. 
+- protocolo RIP: escolhe a rota com o menor número de hops ou saltos entre a origem e o destino.
+
+## Camada de Transporte
+
+- corresponde à camada 4 (transporte) do modelo OSI.
+- sua função é controlar a comunicação fim a fim (host a host). 
+- esta camada verifica se os pacotes enviados ou recebidos chegaram na ordem correta, se não estão faltando (perda) ou se tem erros. Caso estejam com algum problema pode solicitar o reenvio dos dados.
+- protocolos TCP e UDP situam-se nessa camada.
+
+## Camada de Aplicação
+
+- corresponde às camadas 5, 6 e 7 (Sessão, Apresentação e
+Aplicação) do modelo OSI.
+- é a responsável pela comunicação através da rede da maioria dos programas como aplicações de gerenciamento de e-mails, navegadores de internet, emuladores de terminais, entre outros.
+- na camada de aplicação, temos alguns programas específicos que podem suportar aplicações HTTP, WWW, DNS, FPT e SMTP, por exemplo.
+  - HTTP – Hypertext Transfer Protocol ou protocolo de transferência de hipertexto utilizado em páginas da internet.
+  - WWW – World Wide Web é um Sistema de documentos na internet que permite o acesso de informações no formato de hipertexto. Hipertexto são documentos digitais que podem conter textos, sons, imagens e vídeos.
+  - DNS – Domain Name System ou sistema de nome de domínios. Converte nomes no formato de URL (Uniform Resource Locator), como, por exemplo, http://www.cps.sp.gov.br para endereços de ip (ex.: 192.168.0.1).
+  - FTP – File Transfer Protocol ou protocolo de Transferência de arquivos. Permite a troca de arquivos pela Internet.
+  - SMTP – Simple Mail Transfer Protocol ou protocolo de transferência de e-mail simples. Permite o envio de e-mails usando a Internet.
+  
+<div align="center">
+
+## Mas qual modelo atualmente é o mais utilizado?
+
+</div>
+
+Trata-se do ***modelo TCP/IP***.
+
+O modelo OSI de sete camadas é bem didático, pois cada uma delas possui as suas funções e especificações para a comunicação dos dados. Porém, o modelo OSI foi lançado em 1984, depois do TCP/IP (1960 - 1970). A esta altura, o modelo TCP/IP já estava sendo utilizado em diversas universidades de pesquisa e diversos fabricantes começaram a oferecer produtos TCP/IP. Esse foi somente um dentre os diversos fatores para que o modelo TCP/IP saísse vitorioso. Hoje em dia, praticamente todas as comunicações que utilizam a internet valem-se do modelo TCP/IP.
+
+--- 
+
+<div align="center">
+
+## Exercitando e aprimorando
+
+</div>
+
+### 1. Quantas camadas existem respectivamente no modelo OSI e no TCP/IP?
+
+No modelo OSI existem 7 camadas e no modelo TCP/IP existem 4 camadas.
+
+### 2. Por que existe a necessidade de uma padronização das comunicações de dados?
+
+Para que os dispositivos de fabricantes diferentes possam se comunicar entre si, independente da marca ou modelo que os consumidores possuam.
+
+### 3. Qual é a diferença entre os protocolos UDP e TCP?
+
+- Protocolo TCP: orientado para a conexão, fornecendo controle de erros de transmissão e garantindo confiabilidade na transmissão de dados. 
+- Protocolo UDP: não é orientado para a conexão, não fornecendo controle de erros de transmissão. Por essa razão, quando um pacote de um protocolo UDP de uma chamada de vídeo, por exemplo, é perdido, temos uma falha momentânea na chamada.
+
+### 4. Explique a diferença entre os protocolos de roteamento OSPF e RIP.
+
+- protocolo de roteamento OSFP: traça a rota dos dados baseado naquela que possuir a maior velocidade ou desempenho.
+- protocolo RIP: traça a rota dos dados com base naquela que possuir o menor número de saltos entre a origem e o destino.
+
+### 5. Enumere 5 portas de comunicação e os serviços associados a elas.
+
+<div align="center">
+
+Lista de postas mais utilizadas:
+Porta (n°.) | Serviço
+-----------|-----------
+20 | FTP 
+23 | Telnet
+25 | SMTP
+53 | DNS
+63 | Whois
+80 | HTTP
+110 | POP3
+119 | NNTP
+161 | SNMP
+194 | IRC
+443 | HTTPS
+993 | IMAPS
+
+</div>
+
+### 6. Qual é a diferença entre um endereço MAC e IP?
+
+- endereço MAC é o endereço físico da interface de rede.
+- endereço de IP é o endereço lógico.
+
+--- 
+
+<div align="center">
+
+## Debate
+
+</div>
+
+<em>"Sabemos que os modelos de referência têm grande importância no estabelecimento de padrões de comunicação de dados e todos os desenvolvedores de aplicações necessitam seguir esses padrões para que os seus programas possam se comunicar satisfatoriamente com outros sistemas informatizados. Analise a seguinte situação:
+
+Antônio está desenvolvendo um Sistema de Gerenciamento de Estoque integrado entre diversas filiais de uma empresa no Brasil. Esse sistema deve realizar a comunicação com a matriz que detém os Bancos de Dados para o controle do estoque e com os outros setores da sociedade como, por exemplo, o governo para a emissão de guias fiscais.
+
+Debata com os seus colegas e com o professor mediador a forma como Antônio deve seguir os padrões de comunicação de dados, respeitando os modelos OSI/ISO ou TCP/IP."</em>
+
+### Resposta:
+
+Boa noite,
+
+"Acredito que Antônio deva seguir os padrões de comunicação de dados baseados no modelo TCP/IP, considerando que este é o modelo mais utilizado atualmente em redes de computadores, amplamente utilizado para a comunicação entre sistemas em uma rede.
+
+O modelo OSI/ISO trata-se de um modelo teórico de rede, que define sete camadas para a comunicação de dados. Embora seja útil para estudar e entender os conceitos de redes, não é amplamente utilizado na prática. Por outro lado, o modelo TCP/IP é um modelo mais simples e prático que define quatro camadas, sendo elas: camada de aplicação, camada de transporte, camada de rede e camada física.
+
+O modelo TCP/IP é amplamente utilizado para a comunicação de dados em redes (incluindo a Internet), e é uma boa escolha para comunicação de dados entre diferentes filiais de uma empresa, bem como com outros setores da sociedade, como o governo para a emissão de guias fiscais. Portanto, acredito que seja a forma indicada para Antônio seguir os padrões de comunicação de dados."
+
+---
+
+[Voltar à página inicial!](https://github.com/monicaquintal/disciplina_TI_II_ETEC)

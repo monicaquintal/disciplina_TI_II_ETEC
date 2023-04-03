@@ -254,3 +254,7 @@ condutores metálicos.
 8. De que forma o mundo é conectado? Como os dados conseguem trafegar entre os continentes?
 
 > O mundo é conectado desde as PANs e LANs passando pelas MANs, que se unem até formar as WANs se unindo na maior WAN que temos que é a Internet tendo um alcance global.
+
+--- 
+
+[Voltar à página inicial!](https://github.com/monicaquintal/disciplina_TI_II_ETEC)
