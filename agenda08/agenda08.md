@@ -116,10 +116,10 @@ classe de cada um deles?</strong></summary>
 - pegar o primeiro octeto e converter para um valor binário. 
 - no caso do número 30.56.120.240: 
   - o primeiro octeto é o número 30, então 30 (decimal) = 0001 1110 (binário).
-  - analisando o primeiro bit à esquerda que é zero, determinamos que o IP pertence à classe A de endereços.
+  - analisando o primeiro bit à esquerda que é zero, determinamos que o IP pertence à **classe A** de endereços.
 - segundo número 200.123.6.8:
   -  convertendo 200 para binário, temos 11001000.
-  - como os três primeiros bits são um, um e zero (110) temos um IP classe C.
+  - como os três primeiros bits são um, um e zero (110) temos um **IP classe C**.
 </details>
 
 ## Redes Classe A
@@ -131,4 +131,10 @@ classe de cada um deles?</strong></summary>
   - um número elevado de hosts em uma única rede pode levar a alguns problemas como, por exemplo, colisões dentro dessa rede ou um grande
 número simultâneo de broadcasts de mensagens, congestionando-a.
 
-página 8
+> Um `Broadcast` é um tipo de transmissão especial de dados cujo pacote transmitido é recebido por todos os hosts da rede.
+
+- a divisão em sub-redes é feita por meio da utilização de máscaras de sub-redes. 
+  - apesar do conceito de classes de IP já definir qual parte do endereço de IP é um endereço de rede e qual é de host, a máscara de sub-rede confirma quantos bits (dos 32) serão utilizados para identificar a rede e quantos para identificar host. 
+- podemos dividir uma rede com elevado número de hosts em redes menores (sub-redes), ***facilitando a manutenção, solução de problemas e aumentando o seu desempenho***.
+- a máscara de sub-rede determina que o endereço de rede é representado pelo bit 1 e o endereço de host é representado pelo bit 0.
+
