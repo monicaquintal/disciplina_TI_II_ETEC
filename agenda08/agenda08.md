@@ -138,3 +138,126 @@ número simultâneo de broadcasts de mensagens, congestionando-a.
 - podemos dividir uma rede com elevado número de hosts em redes menores (sub-redes), ***facilitando a manutenção, solução de problemas e aumentando o seu desempenho***.
 - a máscara de sub-rede determina que o endereço de rede é representado pelo bit 1 e o endereço de host é representado pelo bit 0.
 
+### Exemplo:
+
+<details>
+<summary>IP 20.1.0.30, com uma máscara de sub-rede 255.0.0.0.</summary>
+
+- convertendo a máscara de sub-rede para binário:
+  - decimal: 255.0.0.0 
+  - binário: 1111 1111. 0000 0000. 0000 0000. 0000 0000
+- para o IP 20.1.0.30, o primeiro octeto (20) representa rede e os três últimos (1.0.30) endereços representa hosts, de acordo com a máscara de sub-rede utilizada (255.0.0.0).
+- logo, o endereço da rede é 20.0.0.0:
+  - IP: 20.1.0.30.
+  - Binário: `0001 0100`. 0000 0001. 0000 0000. 0001 1110.
+  - Decimal: `20`.1.0.30.
+</details>
+
+- a máscara de sub-rede padrão para um endereço de IP classe A é 255.0.0.0.
+  - assim, os oito primeiros bits (primeiro octeto) representam o endereço de rede e os 24 restantes o endereço de host. 
+- em um endereço de IP classe A, para criar uma sub-rede podemos ***utilizar o segundo octeto***. 
+  - os dois primeiros octetos representam o endereço de rede e os dois últimos o endereço de host. 
+  - como o segundo octeto passa a representar o endereço de rede, a máscara de sub-rede será 255.255.0.0, uma vez que para representar o endereço de rede, os bits têm que obrigatoriamente ser 1.
+- considerando a rede 20, podem ser criadas as sub-redes de 20.1, 20.2,20.3 até 20.255:
+
+<div align="center">
+
+Rede 20.0.0.0 | hosts
+--------------| -------------------------
+Sub-rede 20.1 | 20.1.0.1, 20.1.0.2, 20.1.0.3, 20.1.0.4, 20.1.0.5
+Sub-rede 20.2 | 20.2.0.1, 20.2.0.2, 20.2.0.3, 20.2.0.4, 20.2.0.5
+Sub-rede 20.3 | 20.3.0.1, 20.3.0.2, 20.3.0.3, 20.3.0.4, 20.3.0.5
+Sub-rede 20.230 | 20.230.0.1, 20.230.0.2, 20.230.0.3, 20.230.0.4, 20.230.0.5
+
+</div>
+
+### Você no comando
+
+<details>
+<summary>Quantos endereços de host estão disponíveis em cada sub-rede de um IP 20.1.0.1 com uma máscara de sub-rede 255.255.0.0?</summary>
+
+- 2¹⁶ - 2 = 65534.
+- como chegamos a esse número? 
+  - basta observar a máscara de sub-rede: a máscara é ***255.255.0.0***. 
+  - como o número 255 decimal é igual a 1111 1111 em binário, convertendo temos: 1111 1111. 1111 1111. 0000 0000.0000 0000.
+  - na máscara de sub-rede o bit 1 representa o endereço de rede e o bit 0 endereço de host; como temos 16 bits 0 (zero) representando os hosts, o número de hosts é 2¹⁶ - 2 = 65534.
+  - o primeiro endereço no caso do exemplo 20.1.0.0 é o endereço da rede e não pode ser utilizado. E o último 20.1.255.255 é o endereço de broadcast da rede, e também não pode ser utilizado. Por esse motivo, subtrair duas unidades do cálculo.
+
+</details>
+
+## Redes Classe B
+
+- Uma rede classe B utiliza os dois primeiros octetos para o endereçamento de rede e os dois restantes para o endereçamento de host.
+- Logo, em um número de IP X.Y.Z.W, X.Y corresponde ao endereço de rede e Z.W ao endereço de host.
+- Uma rede classe B permite 16.384 redes com 65534 hosts cada.
+- A máscara de sub-rede padrão para um endereço de IP classe B é 255.255.0.0.
+
+<details>
+<summary>Exemplo: considere o IP 140.105.0.76, com uma máscara de sub-rede 255.255.0.0.</summary>
+
+- convertendo a máscara de sub-rede para binário:
+
+decimal | binário
+---------|------------
+255.255.0.0 | 1111 1111. 1111 1111. 0000 0000. 0000 0000
+
+- no IP 140.105.0.76, os primeiros dois octetos (140.105) representam a rede e os dois últimos (0.76) endereços de hosts, de acordo com a máscara de sub-rede padrão utilizada (255.255.0.0). Logo, o endereço da rede é 140.105.0.0
+- os 16 primeiros bits (primeiro e segundo octetos) representam o endereço de rede e os 16 restantes o endereço de host. Nesse exemplo, como foi usada uma máscara padrão nenhuma sub-rede foi criada.
+</details>
+
+- Em um endereço de IP classe B, para criar uma sub-rede utilizamos o terceiro octeto.
+- Assim, os três primeiros octetos representam o endereço de rede e o último o endereço de host. 
+- Como o terceiro octeto passa a representar o endereço de rede, a máscara de sub-rede será 255.255.255.0, uma vez que para representar o endereço de rede os bits têm que obrigatoriamente ser 1.
+
+## Redes de Classe C
+
+- Uma rede classe C utiliza os três primeiros octetos para o endereçamento de rede e último para o endereçamento de host, dessa forma temos, o formato de um número de IP X.Y.Z.W, X.Y.Z corresponde ao endereço de rede e W ao endereço de host.
+- Uma rede classe C permite 2.097.152 redes com 254 hosts cada.
+- A máscara de sub-rede padrão para um endereço de IP classe C é 255.255.255.0.
+- Os 24 primeiros bits (primeiro, segundo e terceiro octetos) representam o endereço de rede e os oito restantes o endereço de host.
+- Em um endereço de IP classe C, é possível criar uma sub-rede utilizando o quarto octeto. 
+
+## Endereços Reservados
+
+### Uso especial:
+
+- Endereços de 127.0.0.0 a 127.255.255.255 são reservados para a comunicação com o computador local ou localhost e para teste de loopback.
+
+### Redes Provadas (Internas):
+
+- Classe A: 10.0.0.0 a 10.255.255.255 com máscara de sub-rede 255.0.0.0 (8bits)
+- Classe B: 172.16.0.0 a 172.31.255.255 com máscara de sub-rede 255.240.0.0 (12bits)
+- Classe C: 192.168.0.0 a 192.168.255.255 com máscara de sub-rede 255.255.0.0 (16bits)
+
+Para isso, faz-se necessária a reserva de endereços de redes privadas pois estes endereços não são usados na internet e, portanto, os roteadores não encaminham os pacotes contendo como destinatários endereços privados, isto é, esses endereços são válidos somente em redes locais de empresas e residências.
+
+<div align="center">
+
+## Configuração de uma rede local com Wi-Fi
+
+</div>
+
+Para realizar a configuração da rede necessitaremos de:
+
+- Roteador sem fio.
+- Cabo(s) de rede.
+- Computador(es).
+
+O roteador utilizado neste exemplo é um roteador com três antenas destacáveis, dual band (opera tanto em redes Wi-Fi de 2,4 e 5GHz) e com uma porta USB para a ligação de impressoras ou HDs externos.
+
+## Identificando o dispositivo:
+
+<div align="center">
+<img src="./assets/leds.png" width="50%">
+<em>Leds indicadores de estado superiores.</em>
+</div>
+
+1. Indicador de Ligado/desligado.
+2. Rede sem fio de 2,4GHZ ativa.
+3. Rede sem fio de 5,0GHz ativa.
+4. Computadores ligados à porta LAN (1-4).
+5. Conexão de Internet ativa.
+6. Impressora ou dispositivo de Armazenamento conectado à porta USB.
+7. Indicador de conexão WPS.
+  - WPS (Wi-Fi Protected Setup): permite que os usuários conectem dispositivos à rede sem fio sem utilizar as senhas. 
+  - É aconselhável deixar a função desabilitada para evitar a invasão de redes sem fio por terceiros não autorizados.
