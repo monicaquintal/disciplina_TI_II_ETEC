@@ -245,7 +245,7 @@ Para realizar a configuração da rede necessitaremos de:
 
 O roteador utilizado neste exemplo é um roteador com três antenas destacáveis, dual band (opera tanto em redes Wi-Fi de 2,4 e 5GHz) e com uma porta USB para a ligação de impressoras ou HDs externos.
 
-## Identificando o dispositivo:
+## 1. Identificando o dispositivo:
 
 <div align="center">
 <img src="./assets/leds.png" width="50%">
@@ -259,5 +259,141 @@ O roteador utilizado neste exemplo é um roteador com três antenas destacáveis
 5. Conexão de Internet ativa.
 6. Impressora ou dispositivo de Armazenamento conectado à porta USB.
 7. Indicador de conexão WPS.
-  - WPS (Wi-Fi Protected Setup): permite que os usuários conectem dispositivos à rede sem fio sem utilizar as senhas. 
-  - É aconselhável deixar a função desabilitada para evitar a invasão de redes sem fio por terceiros não autorizados.
+    - WPS (Wi-Fi Protected Setup): permite que os usuários conectem dispositivos à rede sem fio sem utilizar as senhas. 
+    - É aconselhável deixar a função desabilitada para evitar a invasão de redes sem fio por terceiros não autorizados.
+
+<div align="center">
+<img src="./assets/painel-traseiro.png" width="50%">
+<em>Painel traseiro.</em>
+</div>
+
+1. Fonte de alimentação
+2. Botão liga/desliga
+3. Botão de reset
+4. Porta USB
+5. Porta de conexão com a internet pela Ethernet ou modem DSL
+6. Portas de conexão LAN para computadores locais
+7. Botão WPS para conexão rápida de dispositivos de rede sem fio.
+
+## 2. Conectando e ligando o roteador:
+
+- conectar a fonte de alimentação no conector número 1.
+- ligar o cabo de rede proveniente do modem ou da rede Ethernet na porta número 5 (azul).
+- ligar cabo de rede que vai para o computador em qualquer uma das quatro portas identificadas pelo número 6 (amarelo).
+- ligar o roteador pelo botão liga/desliga.
+-  informações como endereço de rede do roteador (IP), usuário e senha para login, em geral, estão impressas em uma etiqueta na parte inferior do roteador. Caso não estejam, consultar o manual.
+- assim que o dispositivo ligar, para efetuar o teste, abrir o prompt de comando (CMD) e digitar: ping numeroIP para ver se o roteador está corretamente conectado.
+  - se retornar uma mensagem escrita “Host de destino inacessível” verificar as ligações entre os equipamentos.
+  - o `comando ping` testa se a conexão com o host ou servidor de destino está funcionando corretamente. A sintaxe é: ping &lt;endereço ip ou endereço na internet&gt;. Exemplo: ping www.cps.sp.gov.br ou ping 10.0.0.1.
+
+## 3. Configurando o roteador:
+
+- Com o roteador conectado, abra o navegador e digite o endereço IP.
+- Insira o nome de usuário e senha constantes na etiqueta/manual do dispositivo.
+- Retornará uma tela com as configurações do roteador.
+
+### 4. Configuração da Rede Sem Fio
+
+### 5. Configurações de segurança
+
+---
+
+## Exercitando
+
+<details>
+<summary>1. Quantas classes de IP existem? Como identificamos cada uma delas?</summary>
+
+Existem 5 classes de endereços IP: A, B, C, D e E.
+Para identificar cada uma delas devemos analisar os primeiros bits do primeiro octeto:
+- Classe A: o primeiro bit é zero. (0).
+- Classe B: os dois primeiros bits são um e zero (10).
+- Classe C: os três primeiros bits são um, um e zero (110).
+- Classe D: os quatro primeiros bits são um, um, um e zero (1110).
+- Classe E: os quatro primeiros bits são um, um, um e um (1111).
+</details>
+
+<details>
+<summary>2. Qual é a máscara de sub-rede padrão das classes A, B e C?</summary>
+
+As máscaras de sub rede padrão são:
+- Classe A: 255.0.0.0
+- Classe B: 255.255.0.0
+- Classe C: 255.255.255.0
+</details>
+
+<details>
+<summary>3. Dado o endereço de IP 10.2.40.1.<br>
+a) Qual é a classe de IP?<br>
+b) Qual é a máscara de sub-rede padrão?<br>
+c) Qual(is) octeto(s) representa(m) o endereço de rede? </summary>
+
+Para o endereço de IP 10.2.40.1:<br>
+a) é um endereço de IP Classe A, pois convertendo para binário temos:<br>
+
+Decimal | Binário
+--------|----------
+10.2.40.1 | 0000 1010. 0000 0010. 0010 1000. 0000 0001
+
+b) a máscara de sub-rede padrão é 255.0.0.0.<br>
+c)<br>
+Decimal | Binário
+--------|-----------
+10.2.40.1 0000 1010. 0000 0010. 0010 1000. 0000 0001
+</details>
+
+<details>
+<summary>4. O que é broadcast?</summary>
+
+Um Broadcast é um tipo de transmissão especial de dados cujo pacote transmitido é recebido por todos os hosts da rede.
+</details>
+
+<details>
+<summary>5. Quais são as faixas de endereços de IP reservados para redes internas?</summary>
+
+ Os endereços de IP reservados para redes internas são:
+- Classe A: 10.0.0.0 a 10.255.255.255 com máscara de sub-rede 255.0.0.0 (8bits).
+- Classe B: 172.16.0.0 a 172.31.255.255 com máscara de sub-rede 255.240.0.0 (12bits).
+- Classe C: 192.168.0.0 a 192.168.255.255 com máscara de sub-rede 255.255.0.0 (16bits).
+
+</details>
+
+<details>
+<summary>6. O que é WPS? É seguro deixá-lo habilitado?</summary>
+
+WPS é um método para facilitar a conexão de dispositivos wireless (sem fio) sem necessidade de inserirmos a senha da rede sem fio. Não é seguro deixar essa função habilitada, já que possui brechas de segurança que permitem a invasão da rede sem fio.
+</details>
+
+---
+
+## Atividade
+
+### Cidade Inteligente
+
+<em>"Cidade inteligente (smart city) é um conceito que agrega tecnologias para o acesso democrático do cidadão à Internet, em particular na utilização de serviços públicos de governo eletrônico, permitindo que tais cidadãos participem de forma ativa e colaborativa da municipalidade existente.<br>
+
+Tecnologias e serviços, assim como provas de conceitos, para cidades inteligentes precisam ser desenvolvidas para atender peculiaridades de comunidades específicas. Cidades inteligentes incluem tópicos como acesso metropolitano e sem fio à Internet de banda larga, serviços interativos e colaborativos privados, públicos e governamentais, segurança e privacidade do cidadão e Internet das coisas (Internet of things).<br>
+
+Leia o texto apresentado no componente de Inglês: "Smart Cities: Vision"  https://smartcities.media.mit.edu/<br>
+
+<br>
+
+Vamos a atividade!<br>
+
+Suponha uma empresa que possua e mantenha uma infraestrutura de acesso à Internet sem fio e com fio em várias cidades do Brasil. Essas infraestruturas podem variar de cidade para cidade em termos de velocidade e capilaridade (cobertura).<br>
+
+Você e a sua equipe foram contratados por essa empresa para propor um projeto de cidade inteligente a ser implantado nessa infraestrutura de rede. Vocês têm total liberdade para propor projetos para a utilização de toda essa infraestrutura em pelo menos um dos tópicos mencionados no quadro da equipe.<br>
+
+Os projetos propostos deverão ser sustentados por argumentações que demonstrem de que modo a infraestrutura será utilizada para atingir os objetivos do projeto.<br>
+
+Apresente junto com sua equipe, através da ferramenta Microsoft Whiteboard uma proposta.<br>
+
+ATENÇÃO!<br>
+Seu professor tutor enviou através do Correio TEC uma mensagem com o título "Atividade Cidade Inteligente", nesta mensagem contém todas as informações para acesso a ferramenta Microsoft Whiteboard e instruções para a elaboração da proposta.<br>
+
+IMPORTANTE: Mesmo sendo divididos em equipes, a avaliação será individual, de acordo com sua contribuição na proposta do projeto.</em>
+
+### [Resposta aqui.](./atividade_whiteboard_Grupo01.png)
+
+--- 
+
+[Voltar à página inicial!](https://github.com/monicaquintal/disciplina_TI_II_ETEC)
