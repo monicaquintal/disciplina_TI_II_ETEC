@@ -249,6 +249,7 @@ O roteador utilizado neste exemplo é um roteador com três antenas destacáveis
 
 <div align="center">
 <img src="./assets/leds.png" width="50%">
+<br>
 <em>Leds indicadores de estado superiores.</em>
 </div>
 
@@ -264,6 +265,7 @@ O roteador utilizado neste exemplo é um roteador com três antenas destacáveis
 
 <div align="center">
 <img src="./assets/painel-traseiro.png" width="50%">
+<br>
 <em>Painel traseiro.</em>
 </div>
 
