@@ -394,8 +394,6 @@ Seu professor tutor enviou através do Correio TEC uma mensagem com o título "A
 
 IMPORTANTE: Mesmo sendo divididos em equipes, a avaliação será individual, de acordo com sua contribuição na proposta do projeto.</em>
 
-### [Resposta aqui.](./atividade_whiteboard_Grupo01.png)
-
 --- 
 
 [Voltar à página inicial!](https://github.com/monicaquintal/disciplina_TI_II_ETEC)
